@@ -1,0 +1,5 @@
+<% json_file = "./output/#{(Time.now.strftime('%m-%d-%y_%H-%M-%S')).to_s}.json" %>
+json: -f json -o <%=json_file%>
+
+
+default: -c -q -f pretty -f json --out <%=json_file%>
